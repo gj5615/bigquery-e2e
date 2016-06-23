@@ -1,0 +1,22 @@
+'*********** service.query() query works of William Shakespeare publicdata:samples.shakespeare  **********'
+'SELECT COUNT(word), 1457286546.265498 FROM [publicdata:samples.shakespeare]'
+{u'cacheHit': False,
+ u'jobComplete': True,
+ u'jobReference': {u'jobId': u'job_ryNZKw2AViMbs1mZFmeKz7uKh-s',
+                   u'projectId': u'hirenpatelatl-learn-bigquery'},
+ u'kind': u'bigquery#queryResponse',
+ u'rows': [{u'f': [{u'v': u'164656'}, {u'v': u'1.457286546265498E9'}]}],
+ u'schema': {u'fields': [{u'mode': u'NULLABLE',
+                          u'name': u'f0_',
+                          u'type': u'INTEGER'},
+                         {u'mode': u'NULLABLE',
+                          u'name': u'f1_',
+                          u'type': u'FLOAT'}]},
+ u'totalBytesProcessed': u'1332943',
+ u'totalRows': u'1'}
+'*********** service.query() query bigquery-e2e:reference.zip_codes  **********'
+'\n  SELECT state, COUNT(*) AS cnt \n  FROM [bigquery-e2e:reference.zip_codes] \n  WHERE population > 0 AND decommissioned = false \n  GROUP BY state, ORDER BY cnt DESC\n'
+u'552786'
+'*********** service.tables() scratch.cmd_20160306 filter numRows  **********'
+'*********** service.tables() bigquerye2e:reference.zip_codes cost to query state length **********'
+'*********** service.tables() query dryrun **********'

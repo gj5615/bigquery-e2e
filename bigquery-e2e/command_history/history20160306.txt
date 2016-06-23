@@ -1,0 +1,501 @@
+   19  ls
+   20  curl https://sdk.cloud.google.com | bash
+   21  exec -l $SHELL
+   22  ls
+   23  mkdir key
+   24  cd key
+   25  ls
+   26  python
+   27  ls
+   28  gcloud auth activate-service-account hirenpatelatlbigquery@hirenpatelatl-learn-bigquery.iam.gserviceaccount.com --key-file /home/key/service-account-key-hirenpatelatl-learn-bigquery.json
+   29  cd ..
+   30  gcloud info
+   31  bq ls
+   32  bq query 'SELECT zip  FROM [bigquery-e2e:reference.zip_codes] LIMIT 2'
+   33  bq query -help
+   34  bq -help
+   35  bq help
+   36  gcloud help
+   37  glcoud help
+   38  gcloud help
+   39  gcloud config
+   40  gcloud info
+   41  gcloud --project hirenpatelatl-learn-bigquery
+   42  gcloud init
+   43  vi query.txt
+   44  cat query.txt | bq query
+   45  ls
+   46  python 
+   47  pip install --upgrade google-api-python-client
+   48  ls
+   49  python
+   50  git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
+   51  ls
+   52  cd python-docs-samples/
+   53  ls
+   54  cd bigquery/
+   55  ls
+   56  cd api
+   57  ls
+   58  cat requirements.txt 
+   59  pip list
+   60  python getting_started.py
+   61  vi getting_started.py
+   62  gcloud config
+   63  gcloud help
+   64  gcloud topic
+   65  gcloud topic configurations
+   66  gcloud config list
+   67  ls
+   68  python getting_started.py hirenpatelatl-learn-bigquery
+   69  gcloud auth revoke
+   70  gcloud auth login
+   71  ls
+   72  history | tail -20
+   73  python getting_started.py hirenpatelatl-learn-bigquery
+   74  ls
+   75  python getting_started.py help
+   76  python help getting_started.py
+   77  python getting_started.py 
+   78  ls /home/key
+   79  ls
+   80  vi installed_app.py
+   81  python installed_app.py
+   82  python installed_app.py --noauth_local_webserver
+   83  ls
+   84  vi getting_started.py
+   85  vi installed_app.py
+   86  ls
+   87  python installed_app.py hirenpatelatl-learn-bigquery
+   88  python installed_app.py hirenpatelatl-learn-bigquery --noauth_local_webserver
+   89  gcloud auth revoke
+   90  gcloud auth activate-service-account hirenpatelatlbigquery@hirenpatelatl-learn-bigquery.iam.gserviceaccount.com --key-file /home/key/service-account-key-hirenpatelatl-learn-bigquery.json
+   91  python getting_started.py
+   92  history | tail -20
+   93  python getting_started.py hirenpatelatl-learn-bigquery
+   94  gcloud auth activate-service-account hirenpatelatlbigquery@hirenpatelatl-learn-bigquery.iam.gserviceaccount.com --key-file /home/key/service-account-key-hirenpatelatl-learn-bigquery.json
+   95  bq ls
+   96  gcloud auth login
+   97  python getting_started.py hirenpatelatl-learn-bigquery
+   98  ls
+   99  vi list_datasets_projects.py 
+  100  vi list_datasets_projects.py
+  101  projid="hirenpatelatl-learn-bigquery"
+  102  python list_datasets_projects.py ${projid}
+  103  vi load_data_by_post.py 
+  104  cd ..
+  105  cd ..
+  106  cd ..
+  107  ls
+  108  gsutil
+  109  gsutil ls
+  110  gsutil ls gs://${projid}/
+  111  gsutil ls gs://bigquery-data-loading-training/
+  112  bq extract bigquery-e2e:reference.zip_codes gs://${projid}/zip_codes.csv
+  113  gsutil cat -r 0-300 gs://317752944021/zip_codes.csv
+  114  gsutil cat -r 0-300 gs://${projid}/zip_codes.csv
+  115  JOB_ID=job_$(date +"%s")
+  116  bq --job_id=${JOB_ID} query --max_rows=0 "SELECT 17"
+  117  bq --job_id=${JOB_ID} query --max_rows=1 "SELECT 17"
+  118  JOB_ID=job_$(date +"%s")
+  119  ${JOB_ID}
+  120  bq --job_id=${JOB_ID} query --max_rows=1 "SELECT 17"
+  121  bq query --dry_run --format=json "bad query"
+  122  ls
+  123  cat query.txt | bq query --dry_run --format=json
+  124  cat query.txt
+  125  echo a,b,c > temp.csv
+  126  bq load --replace scratch.table1 temp.csv "f1,f2,f3"
+  127  bq help
+  128  bk mk dataset scratch
+  129  bq mk dataset scratch
+  130  bq load --replace scratch.table1 temp.csv "f1,f2,f3"
+  131  bq ls
+  132  bk mk scratch
+  133  bq mk scratch
+  134  bq load --replace scratch.table1 temp.csv "f1,f2,f3"
+  135  history | grep echo
+  136  bq help | more
+  137  bq mkdef scratch:table1
+  138  bq mkdef bigquerye2e:reference.zip_codes
+  139  bq rm dataset
+  140  JOB_ID=job_$(date +"%s")
+  141  bq --job_id=${JOB_ID} \nosync 
+  142  bq --nosync job_id=${JOB_ID} load scratch.table1 temp.csv "f1,f2"
+  143  bq --nosync -job_id=${JOB_ID} load scratch.table1 temp.csv "f1,f2"
+  144  bq --nosync --job_id=${JOB_ID} load scratch.table1 temp.csv "f1,f2"
+  145  bq show -j ${JOB_ID}
+  146  JOB_ID=job_$(date +"%s")
+  147  bq --job_id=${JOB_ID} load scratch.table1 temp.csv "f1,f2"
+  148  bq --format=json show -j ${JOB_ID}
+  149  bq --format=prettyjson show -j ${JOB_ID}
+  150  wc help
+  151  help wc
+  152  man -k wc
+  153  info wc
+  154  history | wc -l
+  155  echo $HISTSIZE
+  156  EXPORT HISTSIZE=1000
+  157  vi /root/.bashrc
+  158  HISTSIZE=1000
+  159  history
+  160  history | grep table1
+  161  history > history.txt
+  162  history | grep load
+  163  clear && history | grep scratch.table1
+  164  bq load scratch.cmdhist history.txt "cmd"
+  165  bq load scratch.cmdhist history.txt "line,cmd"
+  166  vi history.txt
+  167  bq load scratch.cmdhist history.txt
+  168  gsutil
+  169  history | grep ${P / ;
+  170  history | grep PROJ
+  171  history | grep gsutil
+  172  gsutil mv history.txt gs://${projid}/history.txt
+  173  JOB_ID=job_$(date +"%s")
+  174  echo 1,1.0,foo > temp.csv
+  175  bq --job_id=${JOB_ID} load scratch.table2 temp.csv "f1:integer,f2:float,f3:string"
+  176  bq --format=prettyjson show -j ${JOB_ID} | grep outputBytes
+  177  bq query --dry_run --format=prettyjson "select title from publicdata:samples.wikipedia" | grep totalBytesProcessed
+  178  ls
+  179  cd key
+  180  ls
+  181  cat service-account-key-hirenpatelatl-learn-bigquery.json 
+  182  cd ..
+  183  ls
+  184  git clone cs-samples  query.txt  temp.csv
+  185  root@3ee90df79691:/home#
+  186  git clone https://github.com/hirenpatelatl/bigquery-e2e.git
+  187  ls
+  188  cd bigquery-e2e/
+  189  ls
+  190  cat README 
+  191  cd samples/
+  192  ls
+  193  cd ch03
+  194  ls
+  195  cd ../ch04
+  196  ls
+  197  cat ch04.sh 
+  198  cd ../ch05
+  199  ls
+  200  ls /home/keys
+  201  ls /home/key
+  202  vi auth.py
+  203  python auth.py
+  204  python auth.py --noauth_local_webserver
+  205  python auth.py --noauth_local_webserver
+  206  cd ..
+  207  cd ..
+  208  cd ..
+  209  ls
+  210  cd google-cloud-sdk/
+  211  ls
+  212  cd bin
+  213  ls
+  214  cd gcloud 
+  215  cp /home/bigquery-e2e/samples/ch05/auth.py .
+  216  echo "Note to self" > remove_auth_py_file.todo
+  217  cd ..
+  218  cd ..
+  219  python auth.py --noauth_local_webserver
+  220  cp /home/bigquery-e2e/samples/ch05/auth.py .
+  221  ls
+  222  python auth.py
+  223  cd google-cloud-sdk/bin/
+  224  ls
+  225  rm auth.py 
+  226  cd ..
+  227  cd ..
+  228  vi /root/.bashrc
+  229  EXPORT PATH=$PATH:/home
+  230  export PATH=$PATH:/home
+  231  vi /root/.bashrc
+  232  echo $PATH
+  233  ls
+  234  cd bigquery-e2e/
+  235  python auth.py
+  236  source /root/.bashrc
+  237  python auth.py
+  238  cd samples
+  239  ls
+  240  cd ch05
+  241  ls
+  242  vi ch05.sh
+  243  ch05.sh
+  244  history
+  245  BASE_URL=https://www.googleapis.com/bigquery/v2
+  246  PROJECT_URL=${BASE_URL}/projects/bigquery-e2e
+  247  DATASETS_URL=${BASE_URL}/projects/bigquery-e2e/datasets
+  248  DATASET_URL=${BASE_URL}/projects/bigquery-e2e/datasets/scratch
+  249  TABLES_URL=${BASE_URL}/projects/bigquery-e2e/datasets/temp/tables
+  250  TABLEDATA_URL=${DATASET_URL}/tables/shakespeare_quantiles/data
+  251  JOBS_URL=${BASE_URL}/projects/bigquery-e2e/jobs
+  252  curl  -H "$(python auth.py)"     "${PROJECT_URL}/datasets/application_logs"
+  253  vi auth.py
+  254  python auth.py
+  255  curl  -H "$(python auth.py)"     "${TABLEDATA_URL}?maxResults=1"
+  256  echo $BASEURL
+  257  echo ${TABLEDATA_URL}?
+  258  echo ${PROJECT_URL}
+  259  echo $BASE_URL
+  260  BASE_URL=https://www.googleapis.com/bigquery/v2
+  261  PROJECT_URL=${BASE_URL}/projects/bigquery-e2e
+  262  echo ${PROJECT_URL}
+  263  curl  -H "$(python auth.py)"     "${PROJECT_URL}/datasets/application_logs"
+  264  curl  -H "$(python auth.py)"     "${PROJECT_URL}/datasets/backups"
+  265  DATASETS_URL=${BASE_URL}/projects/bigquery-e2e/datasets
+  266  bq query     --destination_table=scratch.shakespeare_quantiles      --max_rows=0      "select quantiles(word_count) from publicdata:samples.shakespeare"
+  267  DATASET_URL=${BASE_URL}/projects/bigquery-e2e/datasets/scratch
+  268  DATASET_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets/scratch
+  269  echo DATASET_URL
+  270  echo $DATASET_URL
+  271  DATASET_URL=${BASE_URL}/projects/DATASET_URL/hirenpatelatl-learn-bigquery/datasets/scratch
+  272  TABLES_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets/temp/tables
+  273  TABLEDATA_URL=${DATASET_URL}/tables/shakespeare_quantiles/data
+  274  JOBS_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/jobs
+  275  DATASETS_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets
+  276  DATASET_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets/scratch
+  277  TABLES_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets/temp/tables
+  278  TABLEDATA_URL=${DATASET_URL}/tables/shakespeare_quantiles/data
+  279  JOBS_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/jobs
+  280  curl  -H "$(python auth.py)"     "${TABLEDATA_URL}?maxResults=1&startIndex=99"
+  281  curl  -H "$(python auth.py)"     "${TABLEDATA_URL}?maxResults=1"
+  282  curl -H "$(python auth.py)"    "${BASE_URL}/projects?alt=json&fields=projects(id),totalItems"
+  283  url -H "$(python auth.py)"   https://www.googleapis.com/bigquery/v2/projects?alt=json
+  284  curl -H "$(python auth.py)"   https://www.googleapis.com/bigquery/v2/projects?alt=json
+  285  ### Datasets.insert()
+  286  DATASET_REF="{'datasetId': 'temp', 'projectId': 'hirenpatelatl-learn-bigquery'}"
+  287  curl  -H "$(python auth.py)"     -H "Content-Type: application/json"     -X POST     -d "{'datasetReference': ${DATASET_REF}}"     "${DATASETS_URL}"
+  288  ### Datasets.list()
+  289  curl  -H "$(python auth.py)" "${DATASETS_URL}?maxResults=1"
+  290  curl  -H "$(python auth.py)" "${DATASETS_URL}?maxResults=4"
+  291  curl  -H "$(python auth.py)"     -X DELETE       "${BASE_URL}/projects/hirenpatelatl-learn-bigquery/datasets/temp"
+  292  SCHEMA="{'fields': [{'name':'foo', 'type': 'STRING'}]}"
+  293  TABLE_REF="{'tableId': 'table1', \
+  294      'datasetId': 'temp', \
+  295      'projectId': 'hirenpatelatl-learn-bigquery'}"
+  296  curl -H "$(python auth.py)"     -H "Content-Type: application/json"     -X POST     -d "{'tableReference': ${TABLE_REF}, \
+  297           'schema': ${SCHEMA}}"     "${TABLES_URL}"
+  298  ### Tables.insert()
+  299  SCHEMA="{'fields': [{'name':'foo', 'type': 'STRING'}]}"
+  300  TABLE_REF="{'tableId': 'table3', \
+  301      'datasetId': 'scratch', \
+  302      'projectId': 'hirenpatelatl-learn-bigquery'}"
+  303  curl -H "$(python auth.py)"     -H "Content-Type: application/json"     -X POST     -d "{'tableReference': ${TABLE_REF}, \
+  304           'schema': ${SCHEMA}}"     "${TABLES_URL}"
+  305  echo ${TABLES_URL}
+  306  TABLES_URL = https://www.googleapis.com/bigquery/v2/projects/hirenpatelatl-learn-bigquery/datasets/scratch/tables
+  307  TABLES_URL="https://www.googleapis.com/bigquery/v2/projects/hirenpatelatl-learn-bigquery/datasets/scratch/tables"
+  308  ### Tables.insert()
+  309  SCHEMA="{'fields': [{'name':'foo', 'type': 'STRING'}]}"
+  310  TABLE_REF="{'tableId': 'table3', \
+  311      'datasetId': 'scratch', \
+  312      'projectId': 'hirenpatelatl-learn-bigquery'}"
+  313  curl -H "$(python auth.py)"     -H "Content-Type: application/json"     -X POST     -d "{'tableReference': ${TABLE_REF}, \
+  314           'schema': ${SCHEMA}}"     "${TABLES_URL}"
+  315  echo ${TABLE_JSON}
+  316  echo ${TABLE_REF}
+  317  SCHEMA2="{'fields': [ \
+  318      {'name':'foo', 'type': 'STRING'}, \
+  319      {'name': 'bar', 'type': 'FLOAT'}]}"
+  320  TABLE_JSON="{'tableReference': ${TABLE_REF}, 'schema': ${SCHEMA2}}"
+  321  curl  -H "$(python auth.py)"     -H "Content-Type: application/json"     -X PUT     -d "${TABLE_JSON}"     "${TABLES_URL}/table1"
+  322  JOB_REFERENCE="{'jobId': 'myHappyJob', 'projectId': 'hirenpatelatl-learn-bigquery'}"
+  323  JOB_CONFIG="{'query': {'query': 'select 17'}}"
+  324  JOB="{'jobReference': ${JOB_REFERENCE}, 'configuration': ${JOB_CONFIG}}"
+  325  curl  -H "$(python auth.py)"      -H "Content-Type: application/json"     -X POST     -d "${JOB}"     "${JOBS_URL}"
+  326  ### Jobs.get()
+  327  curl  -H "$(python auth.py)"     -H "Content-Type: application/json"     "${JOBS_URL}/myHappyJob"
+  328  ### Jobs.list()
+  329  curl  -H "$(python auth.py)"     -H "Content-Type: application/json"     -X GET     "${JOBS_URL}?stateFilter=RUNNING&fields=jobs(jobReference(jobId))"
+  330  ### Jobs.query()
+  331  QUERIES_URL=${BASE_URL}/projects/hirenpatelatl-learn-bigquery/queries
+  332  QUERY="{'query': 'select 17', 'timeoutMs': 1000000}"
+  333  curl  -H "$(python auth.py)"     -H "Content-Type: application/json"     -X POST      -d "${QUERY}"     "${QUERIES_URL}"
+  334  ls
+  335  python query.py
+  336  vi query.py
+  337  python query.py
+  338  vi query.py
+  339  python query.py
+  340  vi query.py
+  341  python query.py
+  342  ls
+  343  vi tour.py
+  344  python tour.py
+  345  bq mk ch06
+  346  cd ../ch06
+  347  ls
+  348  vi ch06.out
+  349  ls
+  350  vi ch06.out
+  351  ls
+  352  python load.py
+  353  vi load.py
+  354  bq help
+  355  gcloud help
+  356  gcloud --format=prettyjson info
+  357  gcloud --format=table info
+  358  gcloud info
+  359  ls
+  360  vi auth.py
+  361  python auth.py
+  362  cd ..
+  363  cd05
+  364  cd ch05
+  365  ls
+  366  python auth.py
+  367  cd ..
+  368  cd ch06
+  369  ls
+  370  python auth.py
+  371  pip install openssl
+  372  pip list
+  373  exit
+  374  exit
+  375  ls
+  376  cd home
+  377  ls
+  378  cd bigquery-e2e/
+  379  l
+  380  ls
+  381  cd samples
+  382  ls
+  383  cd ch06
+  384  ls
+  385  vi auth.py
+  386  cd ../ch05
+  387  ls
+  388  vi auth.py
+  389  cd ../ch06
+  390  ls
+  391  vi auth.py
+  392  python auth.py
+  393  cd ../ch05
+  394  ls
+  395  vi auth.py
+  396  cd ../ch06
+  397  vi auth.py
+  398  python auth.py
+  399  vi auth.py
+  400  python auth.py
+  401  vi auth.py
+  402  python 
+  403  pip list
+  404  pip install pyOpenSSL
+  405  mv auth.py authch06.py
+  406  cp ../ch05/auth.py ../ch06/auth.py
+  407  python auth.py
+  408  vi authch06.py
+  409  ls
+  410  vi auth.py
+  411  gcloud info
+  412  python auth.py
+  413  vi auth.py
+  414  python auth.py
+  415  ls
+  416  python load.py
+  417  cd ..
+  418  cd ..
+  419  ls
+  420  git commmit -m "copied ch05 to ch06 folder and added project_id"
+  421  git commit -m "copied ch05 to ch06 folder and added project_id"
+  422  git config --global user.email "hirenpatelatl@gmail.com"
+  423  git commit -m "copied ch05 to ch06 folder and added project_id"
+  424  git add .
+  425  git commit -m "copied ch05 to ch06 folder and added project_id"
+  426  git push origin master
+  427  git push origin master
+  428  git push origin master
+  429  bq show hirenpatelatl-learning-bigquery
+  430  bq show
+  431  bq show scratch
+  432  bq show [bigquerye2e]
+  433  bq show bigquerye2e
+  434  history | grep history.txt
+  435  bq load --field-delimeter='\001' scratch.cmdhist history.txt "cmd"
+  436  bq load --field_delimiter='\001' scratch.cmdhist history.txt "cmd"
+  437  cd ..
+  438  ls
+  439  cat history > history.txt
+  440  history > history.txt
+  441  bq load --field_delimiter='\001' scratch.cmdhist history.txt "cmd"
+  442  bq load --field_delimiter='\001' --encoding=UTF-8 scratch.cmdhist history.txt "cmd"
+  443  bq load --field_delimiter=\001 --encoding=UTF-8 scratch.cmdhist history.txt "cmd"
+  444  bq load --field_delimiter='x01' --encoding=UTF-8 scratch.cmdhist history.txt "cmd"
+  445  echo 'x01'
+  446  echo '\x01'
+  447  echo -e '\x01'
+  448  seperator='echo -e '\x01''
+  449  echo $seperator
+  450  seperator=$(echo -en '\x01')
+  451  echo $seperator
+  452  bq load --field_delimiter=${seperator} --encoding=UTF-8 scratch.cmdhist history.txt "cmd"
+  453  history | upload_history_to_bq.sh
+  454  history | tail -10 > upload_history_to_bq.sh
+  455  vi upload_history_to_bq.sh 
+  456  history | tail -30 > upload_history_to_bq.sh
+  457  vi upload_history_to_bq.sh 
+  458  ls
+  459  upload_history_to_bq.sh
+  460  chmod +x upload_history_to_bq.sh
+  461  mv upload_history_to_bq.sh upload_history.sh
+  462  ls upload_history.sh 
+  463  ls -l upload_history.sh 
+  464  upload_history.sh 
+  465  echo cmdhist%y
+  466  echo 'cmdhist%y'
+  467  echo ${'cmdhist'%y'}
+
+  468  $(cmdhist+%d)
+  469  echo $(cmdhist+%d)
+  470  echo $(cmdhist + %d)
+  471  val=$(cmdhist + %d)
+  472  val=$('cmdhist' + %d)
+  473  val=$(%d)
+  474  val=$(+%d)
+  475  echo +%d
+  476  echo date+%d
+  477  echo $(date+%d)
+  478  date
+  479  man date
+  480  date man
+  481  date help
+  482  date +Y
+  483  date +%Y
+  484  date +%Y%m
+  485  date +%Y%m%d
+  486  date +%Y%m%d%h
+  487  date +%Y%m%d%H
+  488  date +%Y%m%d%HH
+  489  date +%Y%m%d
+  490  echo 'cmdhist' date +%Y%m%d
+  491  echo date +%Y%m%d
+  492  yyymmdd=$(date +%Y%m%d)
+  493  echo $yyymmdd
+  494  ymd=$(date +%Y%m%d)
+  495  echo $ymd
+  496  ls
+  497  vi upload_history.sh 
+  498  upload_history.sh 
+  499  vi upload_history.sh 
+  500  vi upload_history.sh 
+  501  upload_history.sh 
+  502  bq help
+  503  bq show hirenpatelatl-learn-bigquery:scratch
+  504  bq ls hirenpatelatl-learn-bigquery:scratch
+  505  bq rm hirenpatelatl-learn-bigquery:scratch.cmdhist_
+  506  bq rm hirenpatelatl-learn-bigquery:scratch.cmdhist
+  507  env
+  508  ls
+  509  cp upload_history.sh /home/bigquery-e2e/.
+  510  cd bigquery-e2e/
+  511  ls
+  512  mkdir scripts
+  513  cp upload_history.sh ./scripts/.
+  514  git add .
+  515  git commit -m "created a sample bigquery upload script with ctrl+a as the delimiter"
+  516  git push origin master
+  517  mkdir command_history
+  518  history > ./command_history/history20160306.txt
